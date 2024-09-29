@@ -6,7 +6,7 @@ class gent<T extends Number> {
 
 class generic2 {
     public static void main(String args[]) {
-        gent<String> g = new gent<>();
+        gent<Integer> g = new gent<>();
         g.display();
     }
 }
