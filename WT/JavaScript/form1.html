@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gen {
+            margin-top: 10px;
+        }
+
+
+        #form {
+            background-color: blanchedalmond;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form">
+        <form id="ff" onsubmit="return validateform()">
+            <h1>Details form</h1>
+
+            <label for="Username">Username</label><br>
+            <input type="text" id="Username"><br><br>
+
+
+            <Label for="Pass">Password</Label><br>
+            <input type="password" id="pass"><br><br>
+
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email"><br><br>
+
+
+            <label for="gender">Gender</label><br>
+            <input type="radio" id="gen" name="gender" value="male">Male <br>
+            <input type="radio" id="gen1" name="gender" value="female">Female<br><br>
+
+
+            <label for="add">Addhar Number</label><br>
+            <input type="number" id="add"><br><br>
+
+            <label for="pan">Pan Card No</label><br>
+            <input type="text" name="pan" id="pan"><br><br>
+
+
+            <button type="submit">Submit</button>
+
+
+        </form>
+    </div>
+    <script>
+        function validateform() {
+
+            const user = document.getElementById('Username').value;
+            const pass = document.getElementById('pass').value;
+            const email = document.getElementById('email').value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const add = document.getElementById('add').value;
+            const pan = document.getElementById('pan').value;
+
+            if (user == "") {
+                alert("please enter your name");
+                return false;
+            }
+
+            if (pass == "") {
+                alert("please enter your passsword");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
