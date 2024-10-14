@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div id="tt">
+        <p>hello my name is rohit</p>
+    </div>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="fade-out">Fade-Out</button>
+    <button id="fade-in">Fade-In</button>
+    <button id="fade-toggle">Fade-Toggle</button>
+    <button id="opacity">Opacity</button>
+    <script>
+        $(document).ready(function(){
+            $("#fade-toggle").click(function(){
+                $("#tt").toggle()
+            });
+
+            $("#hide").click(function(){
+                $("#tt").hide()
+            });
+
+            $("#show").click(function(){
+                $("#tt").show()
+            });
+
+            $("#fade-in").click(function(){
+                $("#tt").fadeIn(1000)
+            });
+
+            $("#fade-out").click(function(){
+                $("#tt").fadeOut(1000)
+            });
+
+            $("#opacity").click(function(){
+                $("#tt").animate({
+                    height:50,
+                    opacity:0.5
+                },500)
+            });
+
+        });
+
+
+    </script>
+</body>
+</html>
