@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <label for="1int">Enter the first number</label><br>
+    <input type="number" id="1int">
+    <br><br>
+    <label for="2int">Enter the second number</label><br>
+    <input type="number" id="2int"><br><br>
+    <button type="submit" onclick="calculate()">Calculate</button>
+    <p id="add"></p>
+    <p id="mult"></p>
+    <p id="div"></p>
+    <p id="sub"></p>
+    </div>
+    <script>
+        function calculate(){
+            const a = parseInt(document.getElementById("1int").value);
+            const b = parseInt(document.getElementById("2int").value);
+            var addi = (a + b);
+            var multi = a * b;
+            var divide = a / b;
+            var subs = a - b;
+            
+            document.getElementById("add").innerText=`Addition: ${addi}`;
+            document.getElementById("mult").innerText=`Multiplication: ${multi}`;
+            document.getElementById("div").innerText=`devision: ${divide}`;
+            document.getElementById("sub").innerText=`Subration: ${subs}`;
+        }
+    </script>
+</body>
+</html>
