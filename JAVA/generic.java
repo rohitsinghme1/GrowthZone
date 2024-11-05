@@ -16,5 +16,8 @@ class generic {
         gen<Integer> g = new gen<>(5);
         System.out.println(g.getdata());
 
+        gen<String> g1 = new gen<>("Rohit");
+        System.out.println(g1.getdata());
+
     }
 }
